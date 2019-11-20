@@ -3,6 +3,10 @@
 	"version": "0.1.0",
 	"description": "Utility for encoding and parsing TLV packets as defined in Lightning Network's BOLT 1.",
 	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/arik-so/lightning-tlv"
+	},
 	"engines": {
 		"node": ">=8.0.0",
 		"npm": ">=4.0.0"
