@@ -20,13 +20,13 @@ export default class TLV {
 		return this.value.length;
 	}
 
-	public toBuffer() {
+	public toBuffer(): Buffer {
 		const typeBuffer = new VarInt(this.type).toBuffer();
 		const lengthBuffer = new VarInt(this.dataSize).toBuffer();
 		return Buffer.concat([typeBuffer, lengthBuffer, this.value]);
 	}
 
-	public static parse(undelimitedTLVBuffer: Buffer) {
+	public static parse(undelimitedTLVBuffer: Buffer): TLV {
 		const typeBuffer = VarInt.parse(undelimitedTLVBuffer);
 		const lengthBuffer = undelimitedTLVBuffer.slice(typeBuffer.length);
 		const length = VarInt.parse(lengthBuffer);
