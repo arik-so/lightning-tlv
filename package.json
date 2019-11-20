@@ -1,0 +1,41 @@
+{
+	"name": "lightning-tlv",
+	"version": "0.1.0",
+	"description": "Utility for encoding and parsing TLV packets as defined in Lightning Network's BOLT 1.",
+	"main": "index.js",
+	"engines": {
+		"node": ">=8.0.0",
+		"npm": ">=4.0.0"
+	},
+	"scripts": {
+		"test": "./node_modules/mocha/bin/_mocha ./test",
+		"tsc": "./node_modules/typescript/bin/tsc --build tsconfig.json",
+		"install": "npm run tsc"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.2.5",
+		"@types/debug": "^4.1.5",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.12.11",
+		"chai": "^4.2.0",
+		"mocha": "^6.2.2",
+		"typescript": "^3.7.2"
+	},
+	"dependencies": {
+		"bigint-buffer": "^1.1.5",
+		"debug": "^4.1.1"
+	},
+	"keywords": [
+		"lightning",
+		"network",
+		"tlv",
+		"time",
+		"length",
+		"value",
+		"varint",
+		"varuint",
+		"bolt"
+	],
+	"author": "Arik Sosman",
+	"license": "MIT"
+}
