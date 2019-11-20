@@ -10,11 +10,7 @@ export default class VarInt {
 	private static readonly MAX_VALUE = BigInt(0xffffffffffffffff);
 
 	public constructor(value: number | bigint) {
-		if (typeof value === 'bigint') {
-			this.value = value;
-		} else {
-			this.value = BigInt(value);
-		}
+		this.value = BigInt(value);
 	}
 
 	private calculateEncodingDetails(): { prefix: number, length: number } {
