@@ -5,10 +5,10 @@
 		"sourceMap": true,
 		"lib": [
 			"es2017"
-		]
+		],
+		"declaration": true,
 	},
 	"compileOnSave": true,
-	"declaration": true,
 	"exclude": [
 		"node_modules"
 	]

@@ -1,6 +1,6 @@
 {
 	"name": "lightning-tlv",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Utility for encoding and parsing TLV packets as defined in Lightning Network's BOLT 1.",
 	"main": "index.js",
 	"repository": {
