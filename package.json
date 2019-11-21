@@ -13,7 +13,7 @@
 	},
 	"scripts": {
 		"test": "./node_modules/mocha/bin/_mocha ./test",
-		"tsc": "s./node_modules/typescript/bin/tsc --build tsconfig.json",
+		"tsc": "./node_modules/typescript/bin/tsc --build tsconfig.json",
 		"prepublish": "npm run tsc"
 	},
 	"devDependencies": {
