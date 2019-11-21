@@ -1,6 +1,6 @@
 {
 	"name": "lightning-tlv",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Utility for encoding and parsing TLV packets as defined in Lightning Network's BOLT 1.",
 	"main": "index.js",
 	"repository": {
@@ -13,8 +13,8 @@
 	},
 	"scripts": {
 		"test": "./node_modules/mocha/bin/_mocha ./test",
-		"tsc": "./node_modules/typescript/bin/tsc --build tsconfig.json",
-		"install": "npm run tsc"
+		"tsc": "s./node_modules/typescript/bin/tsc --build tsconfig.json",
+		"prepublish": "npm run tsc"
 	},
 	"devDependencies": {
 		"@types/chai": "^4.2.5",
@@ -29,6 +29,7 @@
 		"bigint-buffer": "^1.1.5",
 		"debug": "^4.1.1"
 	},
+	"types": "index.d.ts",
 	"keywords": [
 		"lightning",
 		"network",
