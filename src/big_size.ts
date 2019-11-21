@@ -1,6 +1,6 @@
 import bigintBuffer = require('bigint-buffer');
 
-export default class VarInt {
+export default class BigSize {
 
 	public readonly value: bigint;
 
@@ -15,15 +15,15 @@ export default class VarInt {
 
 	private calculateEncodingDetails(): { prefix: number, length: number } {
 		// @ts-ignore
-		if (this.value < VarInt.MIN_16_BIT_VALUE) {
+		if (this.value < BigSize.MIN_16_BIT_VALUE) {
 			return {length: 1, prefix: null};
 		}
 		// @ts-ignore
-		if (this.value < VarInt.MIN_32_BIT_VALUE) {
+		if (this.value < BigSize.MIN_32_BIT_VALUE) {
 			return {length: 3, prefix: 0xfd};
 		}
 		// @ts-ignore
-		if (this.value < VarInt.MIN_64_BIT_VALUE) {
+		if (this.value < BigSize.MIN_64_BIT_VALUE) {
 			return {length: 5, prefix: 0xfe};
 		}
 		return {length: 9, prefix: 0xff};
@@ -63,22 +63,22 @@ export default class VarInt {
 		return buffer;
 	}
 
-	public static parse(undelimitedVarintBuffer: Buffer): VarInt {
+	public static parse(undelimitedVarintBuffer: Buffer): BigSize {
 		const firstByte = undelimitedVarintBuffer[0];
 		if (firstByte < this.MIN_16_BIT_VALUE) {
 			const value = undelimitedVarintBuffer.readUInt8(0);
-			return new VarInt(value);
+			return new BigSize(value);
 		}
 		if (firstByte === 0xfd) {
 			const value = undelimitedVarintBuffer.readUInt16BE(1);
-			return new VarInt(value);
+			return new BigSize(value);
 		}
 		if (firstByte === 0xfe) {
 			const value = undelimitedVarintBuffer.readUInt32BE(1);
-			return new VarInt(value);
+			return new BigSize(value);
 		}
 		const buffer = undelimitedVarintBuffer.slice(1, 9);
 		const value = bigintBuffer.toBigIntBE(buffer);
-		return new VarInt(value);
+		return new BigSize(value);
 	}
 }

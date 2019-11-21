@@ -1,4 +1,4 @@
-import VarInt from './src/varint';
+import BigSize from './src/big_size';
 import TLV from './src/tlv';
 import {TypeTu16Handler} from './src/types/type_tu16_handler';
 import {TypeTu32Handler} from './src/types/type_tu32_handler';
@@ -12,6 +12,6 @@ const TypeHandler = {
 
 export {
 	TLV,
-	VarInt,
+	BigSize,
 	TypeHandler
 };

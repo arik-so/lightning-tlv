@@ -1,4 +1,4 @@
-import VarInt from './varint';
+import BigSize from './big_size';
 
 export default class TLV {
 
@@ -11,8 +11,8 @@ export default class TLV {
 	}
 
 	public get tlvSize(): number {
-		const typeSize = new VarInt(this.type).length;
-		const lengthSize = new VarInt(this.dataSize).length;
+		const typeSize = new BigSize(this.type).length;
+		const lengthSize = new BigSize(this.dataSize).length;
 		return typeSize + lengthSize + this.dataSize;
 	}
 
@@ -21,15 +21,15 @@ export default class TLV {
 	}
 
 	public toBuffer(): Buffer {
-		const typeBuffer = new VarInt(this.type).toBuffer();
-		const lengthBuffer = new VarInt(this.dataSize).toBuffer();
+		const typeBuffer = new BigSize(this.type).toBuffer();
+		const lengthBuffer = new BigSize(this.dataSize).toBuffer();
 		return Buffer.concat([typeBuffer, lengthBuffer, this.value]);
 	}
 
 	public static parse(undelimitedTLVBuffer: Buffer): TLV {
-		const typeBuffer = VarInt.parse(undelimitedTLVBuffer);
+		const typeBuffer = BigSize.parse(undelimitedTLVBuffer);
 		const lengthBuffer = undelimitedTLVBuffer.slice(typeBuffer.length);
-		const length = VarInt.parse(lengthBuffer);
+		const length = BigSize.parse(lengthBuffer);
 		const startIndex = length.length;
 		const endIndex = startIndex + Number(length.value);
 		const data = lengthBuffer.slice(startIndex, endIndex);

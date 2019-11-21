@@ -1,9 +1,9 @@
-import VarInt from '../src/varint';
+import BigSize from '../src/big_size';
 import chai = require('chai');
 
 const assert = chai.assert;
 
-describe('VarInt Test', () => {
+describe('BigSize Test', () => {
 	it('should serialize some varints', () => {
 		const testValues = [
 			{
@@ -51,10 +51,10 @@ describe('VarInt Test', () => {
 		for (const currentTest of testValues) {
 			const value = currentTest.value;
 			const expectedEncoding = currentTest.bytes;
-			const varint = new VarInt(value);
+			const varint = new BigSize(value);
 			const encoding = varint.toBuffer();
 			assert.equal(encoding.toString('hex'), expectedEncoding);
-			const decoding = VarInt.parse(encoding);
+			const decoding = BigSize.parse(encoding);
 			// the expected encoding is in hex, so twice as long
 			assert.equal(decoding.length, expectedEncoding.length / 2);
 			assert.equal(decoding.value, value);
