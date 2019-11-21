@@ -1,4 +1,4 @@
-export interface TLVType<T> {
+export interface TLVTypeHandler<T> {
 
 	fromBuffer(buffer: Buffer): T;
 
