@@ -8,7 +8,7 @@
 		"url": "https://github.com/arik-so/lightning-tlv"
 	},
 	"engines": {
-		"node": ">=8.0.0",
+		"node": ">=10.4.0",
 		"npm": ">=4.0.0"
 	},
 	"scripts": {
@@ -23,6 +23,7 @@
 		"@types/node": "^12.12.11",
 		"chai": "^4.2.0",
 		"mocha": "^6.2.2",
+		"tap": "14.10.1",
 		"typescript": "^3.7.2"
 	},
 	"dependencies": {

@@ -1,0 +1,5 @@
+exclude = '{$exclude,node_modules,*.js,*.d.ts,*.map}'
+softTabs = true
+softWrap = false
+tabSize = 4
+wrapColumn = 80
