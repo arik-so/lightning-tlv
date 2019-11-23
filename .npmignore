@@ -96,6 +96,7 @@ typings/
 .travis.yml
 tsconfig.json
 test/
+.nyc_output
 
 # Ignore Typescript Generated Files:
 *.ts

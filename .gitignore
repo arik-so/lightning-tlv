@@ -90,6 +90,7 @@ typings/
 .dynamodb/
 
 .idea
+.nyc_output
 .tm_properties
 
 # Ignore Typescript Generated Files:
