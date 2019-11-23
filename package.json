@@ -1,4 +1,13 @@
 {
+	"contributors": [
+		{
+			"name": "Alex Bosworth",
+			"url": "https://twitter.com/alexbosworth"
+		},
+		{
+			"name": "Arik Sosman"
+		}
+	],
 	"name": "lightning-tlv",
 	"version": "0.1.5",
 	"description": "Utility for encoding and parsing TLV packets as defined in Lightning Network's BOLT 1.",
@@ -8,26 +17,22 @@
 		"url": "https://github.com/arik-so/lightning-tlv"
 	},
 	"engines": {
-		"node": ">=8.0.0",
+		"node": ">=10.4.0",
 		"npm": ">=4.0.0"
 	},
 	"scripts": {
-		"test": "./node_modules/mocha/bin/_mocha ./test",
+		"test": "tap test/*.js test/types/*.js",
 		"tsc": "./node_modules/typescript/bin/tsc --build tsconfig.json",
 		"prepublish": "npm run tsc"
 	},
 	"devDependencies": {
-		"@types/chai": "^4.2.5",
 		"@types/debug": "^4.1.5",
-		"@types/mocha": "^5.2.7",
 		"@types/node": "^12.12.11",
-		"chai": "^4.2.0",
-		"mocha": "^6.2.2",
+		"tap": "14.10.1",
 		"typescript": "^3.7.2"
 	},
 	"dependencies": {
-		"bigint-buffer": "^1.1.5",
-		"debug": "^4.1.1"
+		"bigint-buffer": "^1.1.5"
 	},
 	"types": "index.d.ts",
 	"keywords": [
