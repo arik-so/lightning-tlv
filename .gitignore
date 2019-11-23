@@ -1,8 +1,3 @@
-# Ignore Typescript Generated Files:
-*.d.ts
-*.js
-*.map
-
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
