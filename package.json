@@ -1,11 +1,12 @@
 {
 	"contributors": [
 		{
-			"name": "Alex Bosworth",
-			"url": "https://twitter.com/alexbosworth"
+			"name": "Arik Sosman",
+			"url": "https://twitter.com/arikaleph"
 		},
 		{
-			"name": "Arik Sosman"
+			"name": "Alex Bosworth",
+			"url": "https://twitter.com/alexbosworth"
 		}
 	],
 	"name": "lightning-tlv",
@@ -21,7 +22,7 @@
 		"npm": ">=4.0.0"
 	},
 	"scripts": {
-		"test": "tap test/*.js test/types/*.js",
+		"test": "./node_modules/.bin/tap test/*.js test/types/*.js",
 		"tsc": "./node_modules/typescript/bin/tsc --build tsconfig.json",
 		"prepublish": "npm run tsc"
 	},
