@@ -23,6 +23,7 @@
 	},
 	"scripts": {
 		"test": "./node_modules/.bin/tap test/*.js test/types/*.js",
+		"posttest": "./node_modules/.bin/tap --coverage-report=text-lcov",
 		"tsc": "./node_modules/typescript/bin/tsc --build tsconfig.json",
 		"prepublish": "npm run tsc"
 	},
