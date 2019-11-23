@@ -3,3 +3,7 @@ before_script:
   - npm run tsc
 node_js:
   - '10'
+  - 12
+cache:
+  directories:
+    - $HOME/.npm
