@@ -22,15 +22,21 @@
 		"npm": ">=4.0.0"
 	},
 	"scripts": {
-		"test": "./node_modules/.bin/tap --coverage-report=text-lcov test/*.js test/types/*.js",
+		"coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly ./test/ && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+		"test": "./node_modules/mocha/bin/_mocha ./test",
 		"tsc": "./node_modules/typescript/bin/tsc --build tsconfig.json",
+		"posttest": "npm run coverage",
 		"prepublish": "npm run tsc"
 	},
 	"devDependencies": {
+		"@types/chai": "^4.2.5",
 		"@types/debug": "^4.1.5",
+		"@types/mocha": "^5.2.7",
 		"@types/node": "^12.12.11",
+		"chai": "^4.2.0",
 		"coveralls": "^3.0.8",
-		"tap": "14.10.1",
+		"istanbul": "^0.4.5",
+		"mocha": "^6.2.2",
 		"typescript": "^3.7.2"
 	},
 	"dependencies": {

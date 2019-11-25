@@ -1,12 +1,13 @@
 language: node_js
 before_script:
-- npm run tsc
+  - npm run tsc
 node_js:
-- '10'
-- 12
+  - '10'
+  - 12
 cache:
   directories:
-  - "$HOME/.npm"
+    - "$HOME/.npm"
 env:
   global:
-    secure: UlS+TTE1D1R95CYBUYuZ0HOwCqJCT5/T3TteXSLkBDU72bCDxzsiD1KwWGkl5jn66O2gSdwvDvKHteGtvugQYL1Rbpan5pFxnSnD1hoU2VgJnWZ8XelOMsoxz/gI5e/jrQ27Y4IES2Bz++KABa84OBQ/kCUSLfusVVZa1aZ17e7Et8S5az/FWpDPTsrubWHud7lZEL/Ln+lShievcnyoskPilZNNEqVNTrBYVtrhn6Fp0OEdnUyXOZI9d4Nky3kW0zyUQWVgda/GDZD0SCECTb6wvVAcURcLz1YX2e6qNA8ZPhlj+cXGj7XeGgRxHQs9NbL2QtKrfvZhlLYk4LUgT+C3bTRLw3L7InhFgFVh0aL+NRoMYdUj9tUEPyTiumuoOI1wAjn8yQ+pewC5bdhFp4F+vFgvdsKcQ4bM7DpytvUSwaFVz3MVGfc0KqSqicybK1AqJWuBPsA16QZPMPrz/XOiuhRaB+LXH3Krl++5l4VrPfFAsIwN670sAdMjGZfNHBy5svQg6sS3jr+/KH78is4fOcqvNDAFPAYJMVzs1uMOrkbwkde4JLXK0LF3wRPx/QIbTafi9Mb5ChoUqJ4o2fZrtZcDL90eM8emSbWlnFqgdNszxucHhHtDmfJzROGsq//eaWWHO3yH73gci4WVwLRWoLDSFMj5wzCZIm9LAW0=
+    - NODE_ENV=test
+    - secure: UlS+TTE1D1R95CYBUYuZ0HOwCqJCT5/T3TteXSLkBDU72bCDxzsiD1KwWGkl5jn66O2gSdwvDvKHteGtvugQYL1Rbpan5pFxnSnD1hoU2VgJnWZ8XelOMsoxz/gI5e/jrQ27Y4IES2Bz++KABa84OBQ/kCUSLfusVVZa1aZ17e7Et8S5az/FWpDPTsrubWHud7lZEL/Ln+lShievcnyoskPilZNNEqVNTrBYVtrhn6Fp0OEdnUyXOZI9d4Nky3kW0zyUQWVgda/GDZD0SCECTb6wvVAcURcLz1YX2e6qNA8ZPhlj+cXGj7XeGgRxHQs9NbL2QtKrfvZhlLYk4LUgT+C3bTRLw3L7InhFgFVh0aL+NRoMYdUj9tUEPyTiumuoOI1wAjn8yQ+pewC5bdhFp4F+vFgvdsKcQ4bM7DpytvUSwaFVz3MVGfc0KqSqicybK1AqJWuBPsA16QZPMPrz/XOiuhRaB+LXH3Krl++5l4VrPfFAsIwN670sAdMjGZfNHBy5svQg6sS3jr+/KH78is4fOcqvNDAFPAYJMVzs1uMOrkbwkde4JLXK0LF3wRPx/QIbTafi9Mb5ChoUqJ4o2fZrtZcDL90eM8emSbWlnFqgdNszxucHhHtDmfJzROGsq//eaWWHO3yH73gci4WVwLRWoLDSFMj5wzCZIm9LAW0=
