@@ -1,6 +1,7 @@
 # lightning-tlv
 
 [![Build Status](https://travis-ci.com/arik-so/lightning-tlv.svg?branch=master)](https://travis-ci.com/arik-so/lightning-tlv)
+[![Coverage Status](https://coveralls.io/repos/github/arik-so/lightning-tlv/badge.svg?branch=master)](https://coveralls.io/github/arik-so/lightning-tlv?branch=master)
 
 Utility for encoding and parsing TLV packets as defined in Lightning Network's BOLT 1.
 
